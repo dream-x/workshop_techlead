@@ -28,17 +28,11 @@
 2. top
 3. blade destroy <UID>
 4. top
-5. blade create cpu fullload --timeout 30
-6. top
 
 # Эксперимент 4
 
-1. blade create cpu fullload
+1. blade create cpu fullload --timeout 30
 2. top
-3. blade destroy <UID>
-4. top
-5. blade create cpu fullload --timeout 30
-6. top
 
 # Эксперимент 5
 
@@ -49,3 +43,8 @@
 
 1. blade create network loss --percent 35 --interface lo --timeout 20
 2. ping lo
+
+# Эксперимент 7
+     
+1. blade create disk fill --size 1000 --timeout 10
+2. df
